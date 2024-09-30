@@ -22,6 +22,7 @@ docker build \
     --tag $repo_and_tag \
     -f Dockerfile \
     .
+
 # docker build \
 #     --network=host \
 #     --force-rm \

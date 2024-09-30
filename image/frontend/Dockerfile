@@ -24,4 +24,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # 安裝必要的工具，例如 curl
 RUN apk add --no-cache curl
 
-EXPOSE 3011 
+EXPOSE 80

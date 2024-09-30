@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     foo: 'bar',
     // 客户端和服务器端都可访问的变量
     public: {
-      apiURL: process.env.VUE_APP_API_HOST || 'https://default-api-helenfit.com'
+      apiURL: process.env.VUE_APP_API_HOST || 'https://default-api2-helenfit.com'
     }
   },
 })
