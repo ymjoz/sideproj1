@@ -11,7 +11,7 @@ docker network create "${COMPOSE_PROJECT_NAME}_default"
 
 docker run \
     --name spj-ui-dev \
-    -p 80:3000 \
+    -p 17281:3000 \
     -v ${PRJ_DIR}:/app \
     --workdir=/app \
     --rm \
