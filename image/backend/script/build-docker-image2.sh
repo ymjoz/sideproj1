@@ -5,7 +5,7 @@ cd ${PRJ_DIR}
 export DOCKER_BUILDKIT=1
 
 # CHANGE THIS {DOCKER_IMAGE_NAME}.
-DOCKER_IMAGE_NAME="backend-api"
+DOCKER_IMAGE_NAME="tom4dock/backend-api"
 VERSION=`grep -Po "(?<=['\"])[0-9a-zA-Z\.\-]+" app/version.py`
 
 # LICENSE_MODE 支援: ['dongle', 'cloud', 'date', 'bin', 'src', 'hw-date'], 預設 src

@@ -12,5 +12,5 @@ docker run \
     --network="${COMPOSE_PROJECT_NAME}_default" \
     --network-alias backend \
     --entrypoint bash \
-    backend-api:`grep -Po "(?<=['\"])[0-9a-zA-Z\.\-]+" app/version.py`-src
+    tom4dock/backend-api:`grep -Po "(?<=['\"])[0-9a-zA-Z\.\-]+" app/version.py`-src
 

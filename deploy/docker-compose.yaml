@@ -114,3 +114,21 @@ services:
     environment:
       VUE_APP_API_HOST: ${VUE_APP_API_HOST}
       VUE_APP_DEV_MODE: ${VUE_APP_DEV_MODE}
+
+  backend-api:
+    # image: ${CONTAINER_REGISTRY}/itri/3-3-joint-defense-platform-api:0.0.1-src
+    image: tom4dock/backend-api:0.0.1-src
+    restart: always
+    # volumes:
+    #   - ./info_images:/app/app/static/info_images
+    #   - ../image/backend/app:/app/app
+    ports:
+      - 31244:80
+    environment:
+      # MONGODB_URI: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@mongo:27017/
+      DOCS_URL: /docs
+      OPENAPI_URL: /openapi.json
+      LOG_LEVEL: debug
+    # depends_on:
+    #   - mongo
+    # container_name: jdp-api-dev-1
