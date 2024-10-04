@@ -11,20 +11,20 @@ services:
   #   volumes:
   #     - ./certbot/conf:/etc/letsencrypt
   #     - ./certbot/www:/var/www/certbot
-  #   command: certonly --webroot -w /var/www/certbot --email doittwhite@gmail.com -d rag.helenfit.com --agree-tos --force-renewal
+  #   command: certonly --webroot -w /var/www/certbot --email doittwhite@gmail.com -d ccp.helenfit.com --agree-tos --force-renewal
   #   depends_on:
-  #     - nginx  # 確保 Nginx 在 certbot 前啟動
+  #     - nginx # 確保 Nginx 在 certbot 前啟動
 
-  # # 自動更新憑證
-  # certbot-renew:
-  #   image: certbot/certbot
-  #   container_name: certbot-renew
-  #   volumes:
-  #     - ./certbot/conf:/etc/letsencrypt
-  #     - ./certbot/www:/var/www/certbot
-  #     - ./certbot/logs:/var/log
-  #   entrypoint: /bin/sh -c 'trap exit TERM; while :; do sleep 12h & wait $!; certbot renew >> /var/log/certbot-renew.log 2>&1; done'
-  #   restart: unless-stopped
+  # 自動更新憑證
+  certbot-renew:
+    image: certbot/certbot
+    container_name: certbot-renew
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/logs:/var/log
+    entrypoint: /bin/sh -c 'trap exit TERM; while :; do sleep 12h & wait $!; certbot renew >> /var/log/certbot-renew.log 2>&1; done'
+    restart: unless-stopped
 
   nginx:
     image: nginx:1.25.5
@@ -74,8 +74,6 @@ services:
   frontend-ui:
     image: sideproj-ui:0.1.3
     restart: always
-    # ports:
-    #   - 17281:3000
     environment:
       VUE_APP_API_HOST: ${VUE_APP_API_HOST}
       VUE_APP_DEV_MODE: ${VUE_APP_DEV_MODE}
