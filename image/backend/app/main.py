@@ -30,7 +30,7 @@ from fastapi.responses import ORJSONResponse
 #     contractshopalert_router,
 #     llm_router,
 # )
-# from .version import VERSION
+from .version import VERSION
 
 # 使用 ORJSONResponse 取代 JSONResponse，可加速處理時間
 # Ref: https://fastapi.tiangolo.com/advanced/custom-response/?h=orjson#use-orjsonresponse
@@ -96,8 +96,8 @@ def root():
     """
     回傳程式版本資訊，可用於確認伺服器活著.
     """
-    return {"msg": "server is ready.", "version": "1.2.3"}
-    # return {"msg": "server is ready.", "version": VERSION}
+    # return {"msg": "server is ready.", "version": "1.2.3"}
+    return {"msg": "server is ready.", "version": VERSION}
 
 
 

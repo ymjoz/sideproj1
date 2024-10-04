@@ -4,7 +4,9 @@
     <li>
       <NuxtLink to="/hello/where">Hello-Where</NuxtLink>
     </li>
-    <li></li>
+    <li>
+      <NuxtLink to="https://www.ihtome.com.tw/">IThome Web</NuxtLink>
+    </li>
     <li></li>
     <li></li>
     <li>

@@ -45,7 +45,8 @@ services:
       - ./certbot/www:/var/www/certbot
       - ./maintenance.html:/usr/share/nginx/html/maintenance.html
     depends_on:
-      - sideproj-ui
+      - backend-api
+      # - frontend-ui
       # - 3-3-joint-defense-platform-api
       # - jointdefense-ui-dev
 
@@ -106,8 +107,8 @@ services:
     # command: yarn start
     # container_name: jdp-ui-dev-1
 
-  sideproj-ui:
-    image: sideproj-ui:0.1.2
+  frontend-ui:
+    image: sideproj-ui:0.1.3
     restart: always
     # ports:
     #   - 17281:3000
@@ -117,7 +118,7 @@ services:
 
   backend-api:
     # image: ${CONTAINER_REGISTRY}/itri/3-3-joint-defense-platform-api:0.0.1-src
-    image: tom4dock/backend-api:0.0.1-src
+    image: tom4dock/backend-api:1.0.1-src
     restart: always
     # volumes:
     #   - ./info_images:/app/app/static/info_images
