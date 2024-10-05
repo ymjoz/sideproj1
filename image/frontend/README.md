@@ -80,7 +80,14 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 cd ~/sideproj1/image/frontend 
 bash script/run-dev-mode.sh
 ```
-- 進入容器的shell環境後
+
+- 進入容器的shell環境後(yarn)
+```bash
+yarn install
+yarn dev
+```
+
+- 進入容器的shell環境後(pnpm)
 ```bash
 npm install -g pnpm
 pnpm install
