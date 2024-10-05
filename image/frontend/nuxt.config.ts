@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 
-dotenv.config() // 读取 .env 文件
+// dotenv.config() // 读取 .env 文件
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({

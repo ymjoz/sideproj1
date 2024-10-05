@@ -1,18 +1,28 @@
 <template>
-  <h1>doitt.white</h1>
-  <ul>
-    <li>
-      <NuxtLink to="/hello/where">Hello-Where</NuxtLink>
-    </li>
-    <li>
-      <NuxtLink to="/white/newtest">New-Test</NuxtLink>
-    </li>
-    <li>
-      <a href="https://www.ithome.com.tw/" target="_blank" rel="noopener noreferrer">IThome2</a>
-    </li>
-    <li></li>
-    <li>
-      <NuxtLink to="/hello/where">1.2.3</NuxtLink>
-    </li>
-  </ul>
+  <div>
+    <p>
+      {{ title }}
+    </p>
+    <ul>
+      <li>
+        <NuxtLink to="/hello/where">where</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/white/newtest">New Test</NuxtLink>
+      </li>
+      <li>
+        <a href="https://nuxt.com.cn/" target="_blank">真主黨</a>
+      </li>
+    </ul>
+  </div>
 </template>
+
+<script setup>
+
+  import { ref } from 'vue';
+
+  const title = ref('doitt.white 山陀兒v2');
+  const apiHost = ref('http://localhost');
+</script>
+
+<style lang="scss" scoped></style>
