@@ -17,6 +17,7 @@ docker run \
     --rm \
     -it \
     --network="${COMPOSE_PROJECT_NAME}_default" \
+    -e VUE_APP_API_HOST=${VUE_APP_API_HOST} \
     --network-alias frontend \
     --entrypoint sh \
     node:18-alpine

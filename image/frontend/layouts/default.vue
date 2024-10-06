@@ -4,6 +4,7 @@
     <p>{{ title }} - use yarn</p>
     <h3>API URL: {{ apiHost }}</h3>
     <h4>API URL 2: {{ apiHost2 }}</h4>
+    <h4>neo4j: {{ envAll }}</h4>
     <slot />
   </div>
 </template>
@@ -26,6 +27,7 @@
     minute: 'numeric',
     second: 'numeric'
   }))
+  const envAll = ref(config.public.envAll)
 
   // 计算属性
   const tromsoLocalTime = computed(() => tromsoTime.value)
