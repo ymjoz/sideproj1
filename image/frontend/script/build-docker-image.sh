@@ -4,10 +4,9 @@ cd ${PRJ_DIR}
 
 # CHANGE THIS {DOCKER_IMAGE_NAME}.
 DOCKER_IMAGE_NAME="sideproj-ui"
-# VERSION=`grep -Po "(?<=['\"])[0-9a-zA-Z\.\-]+" ./version.txt`
 VERSION=$(grep -Po '"version": "\K.*?(?=")' ${PRJ_DIR}/package.json)
 
-VUE_APP_API_HOST="${VUE_APP_API_HOST:-https://https://rag.helenfit.com:31244/v1}"
+VUE_APP_API_HOST="${VUE_APP_API_HOST:-https://rag.helenfit.com:31244/v1}"
 VUE_APP_DEV_MODE="${VUE_APP_DEV_MODE:-false}"
 
 repo_and_tag="${DOCKER_IMAGE_NAME}:${VERSION}"

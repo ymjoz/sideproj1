@@ -3,8 +3,7 @@
     <h2>TROMSO {{ tromsoLocalTime }}</h2>
     <p>{{ title }} - use yarn</p>
     <h3>API URL: {{ apiHost }}</h3>
-    <h4>API URL 2: {{ apiHost2 }}</h4>
-    <h4>neo4j: {{ envAll }}</h4>
+    <h4>Env All: {{ envAll }}</h4>
     <slot />
   </div>
 </template>
@@ -19,7 +18,6 @@
   // 定义响应式变量
   const title = ref('doitt.white 山陀兒')
   const apiHost = ref(config.public.apiURL)
-  const apiHost2 = ref(config.public.apiHost2)
   const tromsoTime = ref(new Date().toLocaleString('en-US', {
     timeZone: 'Europe/Oslo',
     hour12: false,

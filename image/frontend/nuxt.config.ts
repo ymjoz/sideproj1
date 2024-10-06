@@ -11,8 +11,7 @@ export default defineNuxtConfig({
     foo: 'bar',
     // 客户端和服务器端都可访问的变量
     public: {
-      apiURL: process.env.VUE_APP_API_HOST || 'http://ccp.helenfit.com:31244/',
-      apiHost2: process.env.VUE_APP_API_HOST || 'http://ccp2.helenfit.com:31243/',
+      apiURL: process.env.VUE_APP_API_HOST || 'http://localhost:31244/',
       envAll: JSON.stringify(process.env),
     }
   },

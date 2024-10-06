@@ -49,11 +49,11 @@ NGINX_CONF_FILE=./nginx.conf
 
 -  網站進入維護模式
 ```bash
-cd ~/3-3a/deploy
+cd ~/sideproj1/deploy
 bash toggle_maintenance.sh on
 ```
 - 結束維護模式
 ```bash
-cd ~/3-3a/deploy
+cd ~/sideproj1/deploy
 bash toggle_maintenance.sh off
 ```
