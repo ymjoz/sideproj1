@@ -72,7 +72,7 @@ services:
       - mongo
 
   frontend-ui:
-    image: sideproj-ui:0.1.4
+    image: sideproj-ui:0.1.5
     restart: always
     environment:
       VUE_APP_API_HOST: ${VUE_APP_API_HOST}

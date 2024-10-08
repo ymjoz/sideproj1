@@ -1,13 +1,13 @@
 FROM node:18-alpine AS build-stage
 WORKDIR /app
 COPY ./ .
-# RUN npm install -g pnpm
-# RUN pnpm install 
-# RUN pnpm run build
-# RUN pnpm run generate
-RUN yarn install
-RUN yarn build
-RUN yarn generate
+RUN npm install -g pnpm
+RUN pnpm install 
+RUN pnpm run build
+RUN pnpm run generate
+# RUN yarn install
+# RUN yarn build
+# RUN yarn generate
 
 # 設置環境變數
 ARG VUE_APP_API_HOST

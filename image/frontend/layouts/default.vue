@@ -15,7 +15,7 @@
   const config = useRuntimeConfig()
 
   // 定义响应式变量
-  const title = ref('DOITT.WHITE 山陀兒v4')
+  const title = ref('DOITT.WHITE 山陀兒v4 use pnpm')
   const apiHost = ref(config.public.apiURL)
   const tromsoTime = ref(new Date().toLocaleString('en-US', {
     timeZone: 'Europe/Oslo',
