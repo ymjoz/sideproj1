@@ -1,9 +1,8 @@
 <template>
   <div>
     <h2>TROMSO {{ tromsoLocalTime }}</h2>
-    <p>{{ title }} - use yarn</p>
+    <p>{{ title }}</p>
     <h3>API URL: {{ apiHost }}</h3>
-    <h4>Env All: {{ envAll }}</h4>
     <slot />
   </div>
 </template>
@@ -16,7 +15,7 @@
   const config = useRuntimeConfig()
 
   // 定义响应式变量
-  const title = ref('doitt.white 山陀兒')
+  const title = ref('DOITT.WHITE 山陀兒v4')
   const apiHost = ref(config.public.apiURL)
   const tromsoTime = ref(new Date().toLocaleString('en-US', {
     timeZone: 'Europe/Oslo',
@@ -45,6 +44,8 @@
   onMounted(() => {
     updateTime()
     setInterval(updateTime, 1000)
-    console.log('apiHost2:', apiHost2.value)
+    console.log('apiHost:', apiHost.value)
+
+    console.log('envAll:', envAll.value)
   })
 </script>
