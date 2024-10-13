@@ -44,8 +44,8 @@
   onMounted(() => {
     updateTime()
     setInterval(updateTime, 1000)
-    console.log('apiHost:', apiHost.value)
+    // console.log('apiHost:', apiHost.value)
 
-    console.log('envAll:', envAll.value)
+    // console.log('envAll:', envAll.value)
   })
 </script>

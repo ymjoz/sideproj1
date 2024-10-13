@@ -33,7 +33,7 @@
 
   const title = ref('doitt.white 山陀兒v3');
   const apiHost = ref(config.public.apiURL);
-  console.log('hello apiHost:', apiHost.value);
+  // console.log('hello apiHost:', apiHost.value);
   const apiResonse = ref('xxxxx-xxxxx');
 
   onMounted(async () => {
