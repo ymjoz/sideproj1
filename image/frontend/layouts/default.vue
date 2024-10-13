@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>TROMSO {{ tromsoLocalTime }}</h2>
+    <h2>v2. TROMSO {{ tromsoLocalTime }}</h2>
     <p>{{ title }}</p>
     <h3>API URL: {{ apiHost }}</h3>
     <slot />
@@ -44,7 +44,7 @@
   onMounted(() => {
     updateTime()
     setInterval(updateTime, 1000)
-    console.log('apiHost:', apiHost.value)
+    console.log('test apiHost:', apiHost.value)
 
     console.log('envAll:', envAll.value)
   })
