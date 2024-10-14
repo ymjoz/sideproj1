@@ -1,8 +1,11 @@
 <template>
   <div>
-    <h1>DOITT WHITE -
+    <h1>太麻里 -
       {{ tromsoLocalTime }}
     </h1>
+    <textarea name="txta" id="txta" rows="30" style="width: 50%">
+      {{ apiResonse }}
+    </textarea>
   </div>
 </template>
 
@@ -16,7 +19,6 @@
 
   const title = ref('doitt.white 山陀兒v3');
   const apiHost = ref(config.public.apiURL);
-  console.log('hello apiHost:', apiHost.value);
   const apiResonse = ref('xxxxx-xxxxx');
   const tromsoTime = ref(new Date().toLocaleString('en-US', {
     timeZone: 'Europe/Oslo',
