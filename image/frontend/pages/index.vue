@@ -3,6 +3,20 @@
     <h1>太麻里 -
       {{ tromsoLocalTime }}
     </h1>
+    <ul>
+      <li>
+        <NuxtLink to="/about">About</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/hello/hello1">Hello</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/white/white1">WHITE1</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/red/red1">Dynamic Components</NuxtLink>
+      </li>
+    </ul>
     <textarea name="txta" id="txta" rows="30" style="width: 50%">
       {{ apiResonse }}
     </textarea>
